@@ -1,0 +1,20 @@
+# Keil/MDK build outputs
+MDK-ARM/TungLamvsMFM384_STM32/
+*.axf
+*.hex
+*.map
+*.htm
+*.lnp
+*.sct
+*.dep
+*.d
+*.o
+*.crf
+*.lst
+
+# Keil user files
+*.uvguix.*
+
+# Misc
+*.bak
+*.tmp
