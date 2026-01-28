@@ -1,0 +1,80 @@
+#ifndef APP_CONFIG_H
+#define APP_CONFIG_H
+
+#include "stm32f1xx_hal.h"
+#include "cmsis_os.h"
+
+/* Queue selection */
+#define USE_QUEUE_STRUCT 1
+#define APP_METER_STRUCT_QUEUE_LEN 1
+#define APP_METER_EVENT_CONSUMERS 2U
+
+/* Logging */
+#define APP_LOG_ENABLE 0
+#define APP_LOG_UART_HANDLE huart1
+#define APP_LOG_UART_TIMEOUT_MS 50U
+
+/* RS485 / Modbus defaults */
+#define RS485_UART_HANDLE huart1
+#define RS485_MUTEX_TIMEOUT_MS 50U
+#define RS485_DE_GPIO_Port ((GPIO_TypeDef *)0)
+#define RS485_DE_Pin ((uint16_t)0)
+#define RS485_RE_GPIO_Port ((GPIO_TypeDef *)0)
+#define RS485_RE_Pin ((uint16_t)0)
+#define RS485_DE_ACTIVE_HIGH 1U
+#define RS485_RE_ACTIVE_HIGH 0U
+#define RS485_DIR_SETTLE_MS 1U
+
+#define MODBUS_SLAVE_ID 1U
+#define MODBUS_BAUDRATE 9600U
+#define MODBUS_PARITY UART_PARITY_NONE
+#define MODBUS_STOPBITS UART_STOPBITS_1
+#define MODBUS_TIMEOUT_MS 200U
+#define MODBUS_RETRIES 2U
+#define MODBUS_REG_ADDR_OFFSET 30000U
+
+/* I2C devices */
+#define APP_I2C_HANDLE hi2c1
+#define LCD_I2C_ADDRESS 0x27U
+#define LCD_BACKLIGHT_DEFAULT 1U
+#define DS3231_I2C_ADDRESS 0x68U
+
+/* Time / DS3231 sync */
+#define DS3231_SYNC_INTERVAL_MS 60000U
+#define DS3231_SYNC_THRESHOLD_SEC 5U
+#define DS3231_PREFER_DS3231 1U
+#define DS3231_SET_ON_RTC_SET 1U
+
+/* TOU default windows (minutes from midnight) */
+#define TOU_LOW_START_MIN 0U
+#define TOU_LOW_END_MIN 360U
+#define TOU_MID_START_MIN 360U
+#define TOU_MID_END_MIN 1080U
+#define TOU_HIGH_START_MIN 1080U
+#define TOU_HIGH_END_MIN 1440U
+
+/* UI button */
+#define BUTTON_GPIO_Port GPIOB
+#define BUTTON_Pin GPIO_PIN_0
+#define BUTTON_ACTIVE_LEVEL 0U
+#define BUTTON_DEBOUNCE_MS 30U
+#define BUTTON_LONG_PRESS_MS 1000U
+
+/* Task timing */
+#define METER_POLL_INTERVAL_MS 1000U
+#define LCD_REFRESH_MS 1000U
+#define UI_POLL_MS 20U
+#define WDG_FEED_INTERVAL_MS 500U
+#define HEARTBEAT_TIMEOUT_MS 2000U
+#define DATASTORE_SAVE_INTERVAL_MS 60000U
+
+/* Datastore in Flash (adjust per MCU) */
+#define DATASTORE_FLASH_BASE 0x0800FC00U
+#define DATASTORE_FLASH_PAGE_SIZE 1024U
+#define DATASTORE_MAGIC 0x4D464D38U /* 'MFM8' */
+#define DATASTORE_VERSION 1U
+
+/* Unit-test-like checks */
+#define APP_TEST_ENABLE 0U
+
+#endif /* APP_CONFIG_H */

@@ -25,6 +25,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "tasks.h"
+#include "app_main.h"
 
 /* USER CODE END Includes */
 
@@ -117,6 +119,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
+  app_main_init();
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -156,11 +159,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+  tasks_rs485(argument);
   /* USER CODE END StartDefaultTask */
 }
 
@@ -174,11 +173,7 @@ void StartDefaultTask(void const * argument)
 void StartTask02(void const * argument)
 {
   /* USER CODE BEGIN StartTask02 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+  tasks_tou(argument);
   /* USER CODE END StartTask02 */
 }
 
@@ -192,11 +187,7 @@ void StartTask02(void const * argument)
 void StartTask03(void const * argument)
 {
   /* USER CODE BEGIN StartTask03 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+  tasks_lcd(argument);
   /* USER CODE END StartTask03 */
 }
 
@@ -210,11 +201,7 @@ void StartTask03(void const * argument)
 void StartTask04(void const * argument)
 {
   /* USER CODE BEGIN StartTask04 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+  tasks_ui(argument);
   /* USER CODE END StartTask04 */
 }
 
@@ -228,11 +215,7 @@ void StartTask04(void const * argument)
 void StartTask05(void const * argument)
 {
   /* USER CODE BEGIN StartTask05 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+  tasks_wdg(argument);
   /* USER CODE END StartTask05 */
 }
 

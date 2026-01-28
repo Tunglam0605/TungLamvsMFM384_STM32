@@ -1,0 +1,12 @@
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+tunglamvsmfm384_stm32\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+tunglamvsmfm384_stm32\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+tunglamvsmfm384_stm32\port.o: ../Core/Inc/FreeRTOSConfig.h
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+tunglamvsmfm384_stm32\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

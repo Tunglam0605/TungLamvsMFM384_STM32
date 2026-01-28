@@ -1,0 +1,6 @@
+#ifndef APP_EVENTS_H
+#define APP_EVENTS_H
+
+#define APP_EVENT_METER_SAMPLE_READY 1U
+
+#endif /* APP_EVENTS_H */
